@@ -1,4 +1,16 @@
-# HW3_Better_Results
+## HW3 – Better Results (Lead Capture to CRM)
+
+This project implements the HW3 requirements for the Lead Capture to CRM scenario.
+
+Workflow:
+Input ({name, email, message}) → Validation (Email/Format Check) → AI Analysis (Intent/Urgency) → CRM/Sheets-like storage (output.json)
+
+Key Features:
+- Validation of missing fields and email format
+- Lead flagging as Valid/Invalid (without deleting invalid leads)
+- AI-style classification (Intent: Sales/Support/Partnership, Urgency: High/Medium/Low)
+- Enriched data persistence with metadata
+
 
 This is a Node.js homework project demonstrating an automated lead processing pipeline.
 
