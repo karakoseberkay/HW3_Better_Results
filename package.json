@@ -1,0 +1,16 @@
+{
+  "name": "hw3_better_results",
+  "version": "1.0.0",
+  "description": "Node.js automation pipeline homework project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "automation",
+    "homework",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC"
+}

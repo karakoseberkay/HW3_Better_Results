@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Alice Smith",
+    "email": "alice@example.com",
+    "message": "I want to buy 100 enterprise licenses right now! Please call me ASAP.",
+    "items": ["Enterprise License", "Support Add-on"],
+    "order_total": 5500,
+    "expected_delivery": "2026-06-01",
+    "product": "Enterprise Software Suite"
+  },
+  {
+    "id": "2",
+    "name": "Bob Jones",
+    "email": "bob@example",
+    "message": "Just looking around, not sure if I need this yet.",
+    "items": ["Basic Plan"],
+    "order_total": 0,
+    "expected_delivery": "N/A",
+    "product": "Basic Plan"
+  },
+  {
+    "id": "3",
+    "name": "Charlie Davis",
+    "email": "charlie@example.com",
+    "message": "We need help setting up the dashboard. It's urgent because we go live tomorrow.",
+    "items": ["Setup Consultation"],
+    "order_total": 200,
+    "expected_delivery": "2026-05-10",
+    "product": "Setup Consultation"
+  },
+  {
+    "id": "4",
+    "name": "",
+    "email": "unknown@example.com",
+    "message": "Can we explore a partner integration?",
+    "items": ["API Access"],
+    "order_total": 50,
+    "expected_delivery": "2026-05-20",
+    "product": "Pro Plan"
+  }
+]

@@ -1,0 +1,225 @@
+[
+  {
+    "id": "1",
+    "name": "Alice Smith",
+    "email": "alice@example.com",
+    "message": "I want to buy 100 enterprise licenses right now! Please call me ASAP.",
+    "items": [
+      "Enterprise License",
+      "Support Add-on"
+    ],
+    "order_total": 5500,
+    "expected_delivery": "2026-06-01",
+    "product": "Enterprise Software Suite",
+    "isValid": true,
+    "validation_status": "Valid",
+    "validationErrors": [],
+    "missing_fields": [],
+    "email_valid": true,
+    "classification": {
+      "intent": "Sales",
+      "urgency": "High"
+    },
+    "social_media_variants": [
+      {
+        "platform": "Twitter/X",
+        "text": "Boost your workflow with our awesome new tool! Ready to scale? 🚀",
+        "hashtags": [
+          "#Tech",
+          "#Innovation",
+          "#Growth"
+        ]
+      },
+      {
+        "platform": "LinkedIn",
+        "text": "We are thrilled to share the benefits of our latest offering and how it can drive enterprise value. Let's connect and discuss how we can help your team succeed.",
+        "hashtags": [
+          "#Enterprise",
+          "#BusinessGrowth",
+          "#Leadership"
+        ]
+      },
+      {
+        "platform": "Instagram",
+        "text": "Loving this aesthetic! ✨ Swipe up to get yours today and level up your daily routine! 🛍️",
+        "hashtags": [
+          "#Lifestyle",
+          "#DailyInspo",
+          "#MustHave"
+        ]
+      }
+    ],
+    "order_summary": "Hi Alice Smith! Thank you for your order. Items: Enterprise License, Support Add-on. Your total is $5500. Expected delivery: 2026-06-01.",
+    "customer_type": "VIP",
+    "confirmation_copy": "Thank you for your premium order! Enjoy this exclusive VIP perk: a free 1-on-1 consultation session with our experts.",
+    "processed_at": "2026-05-06T18:34:33.065Z"
+  },
+  {
+    "id": "2",
+    "name": "Bob Jones",
+    "email": "bob@example",
+    "message": "Just looking around, not sure if I need this yet.",
+    "items": [
+      "Basic Plan"
+    ],
+    "order_total": 0,
+    "expected_delivery": "N/A",
+    "product": "Basic Plan",
+    "isValid": false,
+    "validation_status": "Invalid",
+    "validationErrors": [
+      "Invalid email format"
+    ],
+    "missing_fields": [],
+    "email_valid": false,
+    "classification": {
+      "intent": "Partnership",
+      "urgency": "Low"
+    },
+    "social_media_variants": [
+      {
+        "platform": "Twitter/X",
+        "text": "Boost your workflow with our awesome new tool! Ready to scale? 🚀",
+        "hashtags": [
+          "#Tech",
+          "#Innovation",
+          "#Growth"
+        ]
+      },
+      {
+        "platform": "LinkedIn",
+        "text": "We are thrilled to share the benefits of our latest offering and how it can drive enterprise value. Let's connect and discuss how we can help your team succeed.",
+        "hashtags": [
+          "#Enterprise",
+          "#BusinessGrowth",
+          "#Leadership"
+        ]
+      },
+      {
+        "platform": "Instagram",
+        "text": "Loving this aesthetic! ✨ Swipe up to get yours today and level up your daily routine! 🛍️",
+        "hashtags": [
+          "#Lifestyle",
+          "#DailyInspo",
+          "#MustHave"
+        ]
+      }
+    ],
+    "order_summary": "Hi Bob Jones! Thank you for your order. Items: Basic Plan. Your total is $0. Expected delivery: N/A.",
+    "customer_type": "Regular",
+    "confirmation_copy": "Thanks for your order! We appreciate your business and are excited to serve you.",
+    "processed_at": "2026-05-06T18:34:33.069Z"
+  },
+  {
+    "id": "3",
+    "name": "Charlie Davis",
+    "email": "charlie@example.com",
+    "message": "We need help setting up the dashboard. It's urgent because we go live tomorrow.",
+    "items": [
+      "Setup Consultation"
+    ],
+    "order_total": 200,
+    "expected_delivery": "2026-05-10",
+    "product": "Setup Consultation",
+    "isValid": true,
+    "validation_status": "Valid",
+    "validationErrors": [],
+    "missing_fields": [],
+    "email_valid": true,
+    "classification": {
+      "intent": "Support",
+      "urgency": "High"
+    },
+    "social_media_variants": [
+      {
+        "platform": "Twitter/X",
+        "text": "Boost your workflow with our awesome new tool! Ready to scale? 🚀",
+        "hashtags": [
+          "#Tech",
+          "#Innovation",
+          "#Growth"
+        ]
+      },
+      {
+        "platform": "LinkedIn",
+        "text": "We are thrilled to share the benefits of our latest offering and how it can drive enterprise value. Let's connect and discuss how we can help your team succeed.",
+        "hashtags": [
+          "#Enterprise",
+          "#BusinessGrowth",
+          "#Leadership"
+        ]
+      },
+      {
+        "platform": "Instagram",
+        "text": "Loving this aesthetic! ✨ Swipe up to get yours today and level up your daily routine! 🛍️",
+        "hashtags": [
+          "#Lifestyle",
+          "#DailyInspo",
+          "#MustHave"
+        ]
+      }
+    ],
+    "order_summary": "Hi Charlie Davis! Thank you for your order. Items: Setup Consultation. Your total is $200. Expected delivery: 2026-05-10.",
+    "customer_type": "Regular",
+    "confirmation_copy": "Thanks for your order! We appreciate your business and are excited to serve you.",
+    "processed_at": "2026-05-06T18:34:33.069Z"
+  },
+  {
+    "id": "4",
+    "name": "",
+    "email": "unknown@example.com",
+    "message": "Can we explore a partner integration?",
+    "items": [
+      "API Access"
+    ],
+    "order_total": 50,
+    "expected_delivery": "2026-05-20",
+    "product": "Pro Plan",
+    "isValid": false,
+    "validation_status": "Invalid",
+    "validationErrors": [
+      "Missing name"
+    ],
+    "missing_fields": [
+      "name"
+    ],
+    "email_valid": true,
+    "classification": {
+      "intent": "Partnership",
+      "urgency": "Low"
+    },
+    "social_media_variants": [
+      {
+        "platform": "Twitter/X",
+        "text": "Boost your workflow with our awesome new tool! Ready to scale? 🚀",
+        "hashtags": [
+          "#Tech",
+          "#Innovation",
+          "#Growth"
+        ]
+      },
+      {
+        "platform": "LinkedIn",
+        "text": "We are thrilled to share the benefits of our latest offering and how it can drive enterprise value. Let's connect and discuss how we can help your team succeed.",
+        "hashtags": [
+          "#Enterprise",
+          "#BusinessGrowth",
+          "#Leadership"
+        ]
+      },
+      {
+        "platform": "Instagram",
+        "text": "Loving this aesthetic! ✨ Swipe up to get yours today and level up your daily routine! 🛍️",
+        "hashtags": [
+          "#Lifestyle",
+          "#DailyInspo",
+          "#MustHave"
+        ]
+      }
+    ],
+    "order_summary": "Hi Valued Customer! Thank you for your order. Items: API Access. Your total is $50. Expected delivery: 2026-05-20.",
+    "customer_type": "Regular",
+    "confirmation_copy": "Thanks for your order! We appreciate your business and are excited to serve you.",
+    "processed_at": "2026-05-06T18:34:33.069Z"
+  }
+]
