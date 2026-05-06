@@ -1,54 +1,111 @@
-## HW3 – Better Results (Lead Capture to CRM)
+# HW3 – Better Results (Lead Capture to CRM)
 
-This project implements the HW3 requirements for the Lead Capture to CRM scenario.
+## Overview
+This project implements the HW3 requirements for the **Lead Capture to CRM** scenario using Node.js.
 
-Workflow:
-Input ({name, email, message}) → Validation (Email/Format Check) → AI Analysis (Intent/Urgency) → CRM/Sheets-like storage (output.json)
+The system processes incoming lead data, validates it, enriches it with AI-style classification, and stores the final results in a CRM/Sheets-like structure (`output.json`).
 
-Key Features:
-- Validation of missing fields and email format
-- Lead flagging as Valid/Invalid (without deleting invalid leads)
-- AI-style classification (Intent: Sales/Support/Partnership, Urgency: High/Medium/Low)
-- Enriched data persistence with metadata
+---
 
+## Workflow Architecture
+Input ({name, email, message})  
+→ Validation (Email/Format Check)  
+→ AI Analysis (Intent & Urgency)  
+→ Data Persistence (output.json with full metadata)
 
-This is a Node.js homework project demonstrating an automated lead processing pipeline.
+---
 
 ## Features
 
-1. **Lead Validation**: Checks if the lead has a valid name and email address.
-2. **Lead Flagging**: Marks leads as `isValid: true/false` without deleting invalid leads.
-3. **AI Classification**: Uses a mock LLM function to simulate classifying the lead's message into Intent and Urgency.
-4. **Data Persistence**: Saves processed leads into a local mock CRM array and exports the final records to `output.json`.
-5. **Social Media Generation**: Simulates AI generation of social media variants for Twitter/X, LinkedIn, and Instagram based on the product.
-6. **Order Summary**: Generates a friendly, readable summary of the order.
-7. **VIP Logic**: Flags customers as VIP if their `order_total` is $1000 or more.
+### 1. Validation Logic
+- Checks for missing fields (name, email, message)
+- Validates email format using regex
+- Identifies invalid inputs
 
-## Files
-- `index.js`: The main application script containing all pipeline logic and functions.
-- `package.json`: Project metadata and run scripts.
-- `sample_inputs.json`: Mock data representing incoming leads.
-- `output.json`: The final output file generated after running the pipeline.
+### 2. Lead Flagging
+- Leads are **NOT deleted**
+- Each lead is marked with:
+  - `validation_status: "Valid"` or `"Invalid"`
+  - `missing_fields`
+  - `email_valid`
 
-## How to Run
+### 3. AI Classification
+Each message is analyzed and classified into:
 
-1. Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
-2. Open your terminal and navigate to the project directory:
-   ```bash
-   cd HW3_Better_Results
-   ```
-3. Run the pipeline:
-   ```bash
-   npm start
-   ```
-   *(Alternatively, you can run `node index.js`)*
-4. Check the generated `output.json` file to see the processed CRM records.
+- **Intent**:
+  - Sales
+  - Support
+  - Partnership
+  - General
 
-## Functions Overview
-- `validateLead(payload)`: Adds validation flags based on name/email checks.
-- `mockLLM(prompt)`: Simulates an AI API call. Includes comments showing where real fetch/axios code for OpenAI/Gemini would go.
-- `classifyLeadMessage(message)`: Calls the mock LLM to get intent and urgency.
-- `generateSocialVariants(productOrMessage)`: Calls the mock LLM to get social media posts.
-- `summarizeOrder(order)`: Creates a friendly text summary.
-- `isVip(order_total)`: Returns boolean based on a $1000 threshold.
-- `saveToCRM(record)`: Pushes the final object to the `mockCRM` array.
+- **Urgency**:
+  - High
+  - Medium
+  - Low
+
+This simulates an LLM-based classification step.
+
+### 4. Data Persistence
+All leads (valid and invalid) are stored in `output.json` with:
+- Original data
+- Validation results
+- Classification results
+- Metadata
+
+---
+
+## Additional Features (Extended HW3)
+
+### Social Media Variants
+Generates 3 AI-style content outputs:
+- Twitter/X (short & punchy)
+- LinkedIn (professional)
+- Instagram (casual + hashtags)
+
+Each output includes:
+- platform
+- text
+- hashtags
+
+---
+
+### Order Summary & VIP Logic
+- Generates a friendly order summary including:
+  - items
+  - total
+  - expected delivery
+- Applies conditional logic:
+  - If `order_total > 500` → VIP customer
+  - VIP users receive enhanced confirmation messages
+
+---
+
+## Test Case
+
+The system was tested with both valid and invalid inputs:
+
+- Missing name → `validation_status = "Invalid"`
+- Invalid email format → `validation_status = "Invalid"`
+- Valid lead → correctly classified with Intent and Urgency
+
+All records (including invalid ones) are stored in `output.json`.
+
+---
+
+## Example Output Fields
+
+Each record includes:
+
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "message": "I need help urgently",
+  "validation_status": "Valid",
+  "missing_fields": [],
+  "email_valid": true,
+  "classification": {
+    "intent": "Support",
+    "urgency": "High"
+  }
+}
